@@ -1,0 +1,45 @@
+## BACKGROUND
+
+Autocar Manufacturing is expanding its vehicle offerings into the construction market in Alabama. The sales team has compiled a list of prospective businesses currently operating heavy-duty Class 8 trucks. Your task is to:
+
+1. Review the provided data set.
+2. Identify which businesses are relevant to the construction industry.
+3. Classify the customers into appropriate segments.
+4. Analyze the data to extract actionable insights and support strategic decision-making.
+
+## KEY TASKS TO PERFORM
+
+### DATA WRANGLING
+1. Import the data set into a SQL Server or similar database
+2. Develop a query to summarize the data by a unique business + address to determine total VINs (Fleet Size)
+3. Enhance the query by performing the following segmentations and adding it as new fields:
+	a) Determine appropriate Fleet Size Group (Example: Fleet size group: 1-20, 20+ VINs)
+	b) Calculate average fleet age per Unique Customer using Year Model
+	c) Calculate total vehicles > 10 years per Unique Customer using Year Model
+	d) Determine the Engine Liter group (e.g., >5L, 5–6L) and incorporate it into the query. Ensure each customer appears only once in the final result.
+4. Create an “Is Construction” flag by combining the NAICS code and Registration Vocation, using criteria you deem appropriate.
+5. Calculate the Top Make for each unique business + address and add as a new field
+
+### VISUALIZATION
+1. Develop visualization of data set using Excel, Power BI or other BI Tool
+2. Include Slicers with attributes where applicable
+
+### ANALYSIS
+1. Interpret the data through the provided visualizations and present a compelling summary of key insights to the Autocar Sales Team.
+2. The sales team wants to start calling these businesses immediately and have 20 Trucks with engine liters > 10 available to sell.
+	a) Using the available data: Build a list of the Top 10 customers they should be calling first. Explain your thinking.
+
+## EVALUATION CRITERIA
+
+### Data Wrangling
+- Ability to import raw data into SQL Server
+- Ability to summarize data at the correct grain.
+- Ability to perform data segmentation with a creative approach solve problem.
+
+### Visualization
+- Clear and professional layout with intuitive design.
+- Effective use of charts, KPIs, and slicers for interactive analysis.
+- Consistent formatting, labeling, and color schemes to enhance readability.
+
+### Data Analysis
+- Ability to derive actionable insights from the data to support decision-making.
