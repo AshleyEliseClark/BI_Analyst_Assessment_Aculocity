@@ -1,34 +1,45 @@
-# Assessment Instructions
+## BACKGROUND
 
-## Objectives
-The primary objective of this assessment is to analyze the provided data and derive meaningful insights that can inform business decisions. The assessment will focus on understanding customer behavior, identifying trends, and summarizing key findings.
+Autocar Manufacturing is expanding its vehicle offerings into the construction market in Alabama. The sales team has compiled a list of prospective businesses currently operating heavy-duty Class 8 trucks. Your task is to:
 
-## Steps to Complete the Assessment
+1. Review the provided data set.
+2. Identify which businesses are relevant to the construction industry.
+3. Classify the customers into appropriate segments.
+4. Analyze the data to extract actionable insights and support strategic decision-making.
 
-1. **Data Preparation**
-   - Gather all necessary raw data files and place them in the `data/raw` directory.
-   - Ensure that the data is clean and formatted correctly for analysis.
+## KEY TASKS TO PERFORM
 
-2. **Database Setup**
-   - Execute the SQL script located in `sql/01_create_table.sql` to create the required tables in your database.
-   - Follow the instructions in `sql/02_import_notes.md` to import the raw data into the database.
+### DATA WRANGLING
+1. Import the data set into a SQL Server or similar database
+2. Develop a query to summarize the data by a unique business + address to determine total VINs (Fleet Size)
+3. Enhance the query by performing the following segmentations and adding it as new fields:
+	a) Determine appropriate Fleet Size Group (Example: Fleet size group: 1-20, 20+ VINs)
+	b) Calculate average fleet age per Unique Customer using Year Model
+	c) Calculate total vehicles > 10 years per Unique Customer using Year Model
+	d) Determine the Engine Liter group (e.g., >5L, 5–6L) and incorporate it into the query. Ensure each customer appears only once in the final result.
+4. Create an “Is Construction” flag by combining the NAICS code and Registration Vocation, using criteria you deem appropriate.
+5. Calculate the Top Make for each unique business + address and add as a new field
 
-3. **Data Analysis**
-   - Use the SQL scripts in the `sql` directory to perform various analyses:
-     - Run `sql/03_customer_summary_view.sql` to create a summary view of customer data.
-     - Execute `sql/04_validation_checks.sql` to validate the integrity of the data.
-     - Utilize `sql/05_top10_logic.sql` to identify the top 10 entries based on the specified criteria.
+### VISUALIZATION
+1. Develop visualization of data set using Excel, Power BI or other BI Tool
+2. Include Slicers with attributes where applicable
 
-4. **Visualization**
-   - Open the Power BI report located in `powerbi/BI_Analyst_Assessment_Aculocity.pbix`.
-   - Review the visualizations and dashboards to gain insights from the data analysis.
+### ANALYSIS
+1. Interpret the data through the provided visualizations and present a compelling summary of key insights to the Autocar Sales Team.
+2. The sales team wants to start calling these businesses immediately and have 20 Trucks with engine liters > 10 available to sell.
+	a) Using the available data: Build a list of the Top 10 customers they should be calling first. Explain your thinking.
 
-5. **Documentation of Findings**
-   - Document your key findings in `docs/key_findings.md`.
-   - Include any relevant notes on the methodologies used in `docs/methodology_notes.md`.
+## EVALUATION CRITERIA
 
-6. **Final Report**
-   - Compile your findings and insights into a final summary report, which should be saved as `outputs/final_summary.pdf`.
+### Data Wrangling
+- Ability to import raw data into SQL Server
+- Ability to summarize data at the correct grain.
+- Ability to perform data segmentation with a creative approach solve problem.
 
-## Submission
-Once you have completed the assessment, please submit your final summary report along with any additional documentation as required.
+### Visualization
+- Clear and professional layout with intuitive design.
+- Effective use of charts, KPIs, and slicers for interactive analysis.
+- Consistent formatting, labeling, and color schemes to enhance readability.
+
+### Data Analysis
+- Ability to derive actionable insights from the data to support decision-making.
